@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #000;
+}
+.logo img {
+  height: 60px; 
+  display: block;
+  margin-top: 15px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(45deg, white, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  color: rgb(101, 100, 100);
+  text-decoration: none;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #000000;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background-color: #ffd700;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 80%;
+  left: 10%;
+}
+
+/* Login replace cheythu CALL BUTTON */
+.call-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #007bff;  /* Blue screenshot pole */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+}
+
+.call-btn i {
+  font-size: 16px;
+}
+
+.call-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,123,255,0.4);
+  color: white;
+}
+
+/* ================= HEADER ================= */
+.header-flex {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    z-index: 1000;
+
+}
+
+
+
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-icon span {
+    width: 26px;
+    height: 3px;
+    background: #40c3ff;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+/* ================= BREADCRUMB ================= */
+.center-nav {
+    margin-top: 100px;
+    /* header height compensate */
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #777;
+}
+
+.center-nav a {
+    text-decoration: none;
+    color: #777;
+}
+
+.center-nav a:hover {
+    color: #35b6d4;
+}
+
+.center-nav span {
+    margin: 0 6px;
+}
+
+.center-nav .active {
+    color: #100101;
+    font-weight: 500;
+}
+
+/* ================= MOBILE MENU ================= *
+
+
+
+/* ================= HERO ================= */
+.hero {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+
+.scroll-text {
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: #777;
+    margin-top: 30px;
+}
+
+.arrow {
+    font-size: 22px;
+    color: #777;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+    display: flex;
+    padding: 80px 60px;
+    gap: 80px;
+    background: #fff;
+}
+
+.contact-left {
+    width: 40%;
+}
+
+.contact-left h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-left h2 span {
+    font-weight: 300;
+}
+
+.info {
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.social span {
+    margin-right: 15px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+/* ================= FORM ================= */
+.contact-right {
+    width: 60%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+}
+
+::placeholder {
+    color: #aaa;
+}
+
+.row {
+    display: flex;
+    gap: 30px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    background: #35b6d4;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2aa3bd;
+}
+
+button span {
+    margin-left: 10px;
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .contact {
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f2eaea;
+}
