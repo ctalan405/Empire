@@ -14,6 +14,7 @@ body {
   height: 60px; 
   display: block;
   margin-top: 15px;
+  transition: height 0.3s ease;
 }
 
 .navbar {
@@ -46,6 +47,7 @@ body {
   display: flex;
   list-style: none;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .nav-links a {
@@ -78,12 +80,12 @@ body {
   left: 10%;
 }
 
-/* Login replace cheythu CALL BUTTON */
+/* CALL BUTTON - Existing perfect */
 .call-btn {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #007bff;  /* Blue screenshot pole */
+  background: #007bff;
   color: white;
   padding: 10px 20px;
   border-radius: 30px;
@@ -103,6 +105,108 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0,123,255,0.4);
   color: white;
+}
+
+/* HAMBURGER MENU - Mobile only */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* MOBILE RESPONSIVE - 768px and below */
+@media (max-width: 768px) {
+  .logo img {
+    height: 45px;
+    margin-top: 8px;
+  }
+  
+  .navbar {
+    padding: 0 2rem;
+    height: 70px; /* Slightly taller for touch */
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    height: calc(100vh - 70px);
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3rem 0;
+    transition: left 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    gap: 0;
+  }
+  
+  .nav-links.active {
+    left: 0;
+  }
+  
+  .nav-links li {
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .nav-links a {
+    padding: 0;
+    font-size: 18px; /* Larger touch target */
+    width: 80%;
+    text-align: center;
+  }
+  
+  /* Hamburger Animation */
+  .hamburger {
+    display: flex;
+  }
+  
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* Compact Call Button */
+  .call-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 1.5rem;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
 }
 
 
